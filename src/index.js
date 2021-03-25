@@ -3,10 +3,6 @@ const fs = require('fs');
 const client = new Client({ disableMentions: "everyone" });
 const master = require('../configs/bot.json');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://karpbot:Karp@karpbot.wlusn.mongodb.net/server?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(console.log('Connected to MongoDB'));
 
 client.commands = new Collection();
 client.aliases = new Collection();
